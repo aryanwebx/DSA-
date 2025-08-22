@@ -35,8 +35,7 @@ Node *CreateDLL(int arr[],int index,int size,Node *back){
 
 int main(){
     int arr[]={1,2,3,4,5};
-    Node *head=NULL;
-    Node *tail=NULL;
+    Node *head=NULL;   
     head=CreateDLL(arr,0,5,NULL);
     traverse(head);
 
