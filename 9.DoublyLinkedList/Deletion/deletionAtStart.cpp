@@ -43,7 +43,7 @@ int main()
 {
     int arr[] = {1, 2, 3, 4, 5};
     Node *head = NULL;
-    head = CreateDLL(arr, 0, 5, NULL);
+    head = CreateDLL(arr, 0, 1, NULL);
     traverse(head);
     
     if(head!=NULL){
@@ -56,6 +56,7 @@ int main()
         else{
             Node *temp=head;
             head=head->next;
+            head->prev=NULL;
             delete temp;
         }
     }
