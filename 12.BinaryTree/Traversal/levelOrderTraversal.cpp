@@ -56,17 +56,23 @@ int main()
 
     // Level Order traversal of Binary tree
 
-    cout << "\nLevel Order Traversal :";
+    cout << "\nLevel Order Traversal :\n";
     q.push(root);
     while (!q.empty())
     {
+        int levelSize=q.size();
+        while(levelSize--){
         Node *temp = q.front();
         cout << temp->data << " ";
+        
         q.pop();
         if (temp->left != NULL)
             q.push(temp->left);
         if (temp->right != NULL)
             q.push(temp->right);
+        }
+        cout<<endl;        
+        
     }
 
     return 0;
